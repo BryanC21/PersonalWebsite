@@ -1,15 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect } from 'react';
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 function App() {
+
+  useEffect(() => {
+    document.title = 'Personal Website';
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Work in progress...
-        </p>
-      </header>
+      <Navbar />
+      <Home />
+      <Contact />
+      <Projects />
     </div>
   );
 }

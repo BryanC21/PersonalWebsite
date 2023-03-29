@@ -4,13 +4,11 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, 'portfolio', 'build')));
+const port = process.env.PORT || 3005;
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'portfolio', 'build', 'index.html'));
+    res.send('Hello World!');
 });
-
-const port = process.env.PORT || 443;
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
