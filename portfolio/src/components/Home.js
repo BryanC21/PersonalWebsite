@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 import "../styles/Contact.css"
-import PDF from "../resources/BryanCalderaResume.pdf";
+//import PDF from "../resources/BryanCalderaResume.pdf";
 
 function Home() {
     return (
@@ -16,7 +16,7 @@ function Home() {
             <br/>
             <div className="Contact">
                 <h2>
-                    <a href={PDF} target="_blank" rel="noreferrer">Resume</a>
+                    <a href={process.env.PUBLIC_URL + '/BryanCalderaResume.pdf'} target="_blank" rel="noreferrer">Resume</a>
                 </h2>
             </div>
 
