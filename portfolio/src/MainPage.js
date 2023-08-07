@@ -1,13 +1,13 @@
 import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 import { createTheme } from '@mui/material/styles';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Myself from './resources/Myself.jpg';
+import { Button } from '@mui/material';
 
 function MainPage() {
 
@@ -48,7 +48,7 @@ function MainPage() {
                             Specialization in Cloud and Mobile Computing
                         </Typography>
                         <Typography variant="h2" sx={{ my: 2 }}>
-                            <a href={process.env.PUBLIC_URL + '/BryanCalderaResume.pdf'} target="_blank" rel="noreferrer">Resume</a>
+                            <Button variant="contained" size="large" href={process.env.PUBLIC_URL + '/BryanCalderaResume.pdf'} target="_blank" rel="noreferrer"><Typography variant="h4" sx={{ my: 0 }}>Resume</Typography></Button>
                         </Typography>
                     </Box>
                     <Box sx={{ textAlign: 'center', width: '50%' }}>
@@ -71,7 +71,7 @@ function MainPage() {
                             Projects
                         </Typography>
                         <Typography variant="h1" sx={{ my: 5 }}>
-                            <Link href="https://github.com/BryanC21/">GitHub</Link>
+                            <Button variant="contained" size="large" href="https://github.com/BryanC21/"><Typography variant="h5" sx={{ my: 0 }}>GitHub</Typography></Button>
                         </Typography>
 
                     </Box>
@@ -91,11 +91,11 @@ function MainPage() {
                         <Typography variant="h1" sx={{ my: 6 }}>
                             Contact
                         </Typography>
-                        <Typography variant="h3" sx={{ my: 4 }}>
-                            <Link href="https://www.linkedin.com/in/bryancaldera/">LinkedIn</Link>
+                        <Typography variant="h3" sx={{ my: 0 }}>
+                            <Button variant="contained" size="large" href="https://www.linkedin.com/in/bryancaldera/"><Typography variant="h5" sx={{ my: 0 }}>LinkedIn</Typography></Button>
                         </Typography>
                         <Typography variant="h3" sx={{ my: 4 }}>
-                            <Link href="mailto:bryanicaldera@gmail.com">bryanicaldera@gmail.com</Link>
+                            <Button variant="contained" size="large" href="mailto:bryanicaldera@gmail.com"><Typography variant="h5" sx={{ my: 0 }}>bryanicaldera@gmail.com</Typography></Button>
                         </Typography>
 
                     </Box>
